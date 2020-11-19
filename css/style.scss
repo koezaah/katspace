@@ -266,7 +266,7 @@ main > nav > ul > li.active {
     position: absolute;
     top: -50px;
     right: -200px;
-    z-index: 5;
+    z-index: 0;
   }
 
   #print div.clipped {
@@ -276,7 +276,7 @@ main > nav > ul > li.active {
     top: -65px;
     right: -215px;
     background-color: white;
-    z-index: 3;
+    z-index: 0;
   }
 
   main > #print div:nth-child(odd):hover 

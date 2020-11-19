@@ -63,8 +63,8 @@
             <h3>{{ item.title }}</h3>
             <span>{{item.client}}</span>
             <p>{{item.description}}</p>
-            <img class="clipped" :src="printImages[item.id]"/>
             <div class="clipped"></div>
+            <img class="clipped" :src="printImages[item.id]"/>
             <div class="tag">
               <span v-for="tag in item.tags">{{ tag }}</span>
             </div>
