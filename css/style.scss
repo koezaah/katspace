@@ -261,8 +261,8 @@ main > nav > ul > li.active {
     width: 430px;
     height: 430px;
     background-size: cover;
-    -webkit-clip-path: url(#my-clip-path);
-    clip-path: url(#my-clip-path);
+    -webkit-clip-path: url(clip.svg#my-clip-path);
+    clip-path: url(clip.svg#my-clip-path);
     position: absolute;
     top: -50px;
     right: -200px;
