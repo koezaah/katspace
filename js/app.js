@@ -28,7 +28,7 @@ const app = new Vue({
   data: {
     print: null,
     artwork: null,
-    currentVisibleContent: 'artwork',
+    currentVisibleContent: 'print',
     printImages: printImages,
     artworkImages: artworkImages
   },
