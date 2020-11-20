@@ -78,7 +78,6 @@ main > nav > ul > li {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 700;
-  text-shadow: 2px 2px #166369;
 }
 
 main > nav > ul > li.active {
@@ -91,6 +90,7 @@ main > nav > ul > li.active {
   .artwork-wrapper{
     width: 100vw;
     height: 100vw;
+    margin-bottom: 2rem;
 
   }
   img{
