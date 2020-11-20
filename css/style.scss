@@ -54,7 +54,7 @@ main {
 }
 
 main > section {
-  min-height: 200vh;
+  min-height: 100vh;
 }
 
 main > nav {
@@ -98,7 +98,7 @@ main > nav > ul > li.active {
     height: 100%;
   }
   .text{
-
+    display: none;
   }
 }
 
@@ -275,7 +275,7 @@ main > nav > ul > li.active {
     height: 460px;
     top: -65px;
     right: -215px;
-    background-color: white;
+    background-color: #FCFCFA;
     z-index: 0;
   }
 
@@ -318,7 +318,7 @@ main > nav > ul > li.active {
     }
   }
 
-  .artwork-wrapper:hover{
+  #artwork .artwork-wrapper:hover{
 
     .overlay{
       display: flex;
@@ -334,6 +334,7 @@ main > nav > ul > li.active {
     }
 
     .text{
+      display: block;
       font-weight: 600;
       font-size: 2rem;
       color: #FDEB16;
