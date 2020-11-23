@@ -33,7 +33,7 @@
   <body>
     <div id="app">
       <aside>
-        <div>
+        <div class="aside-wrapper">
           <picture>
             <img src="./img/kat.jpg" alt="Portrait photo of Kat" />
           </picture>
@@ -51,15 +51,16 @@
         </div>
       </aside>
 
+      <nav>
+        <ul>
+          <li v-on:click="switchContent('print')" :class="currentVisibleContent == 'print' ? 'active' : ''">PRINT</li>
+          <li v-on:click="switchContent('artwork') " :class="currentVisibleContent == 'artwork' ? 'active' : ''">ARTWORK</li>
+        </ul>
+      </nav>
+
       <main>
-        <nav>
-          <ul>
-            <li v-on:click="switchContent('print')" :class="currentVisibleContent == 'print' ? 'active' : ''">PRINT</li>
-            <li v-on:click="switchContent('artwork') " :class="currentVisibleContent == 'artwork' ? 'active' : ''">ARTWORK</li>
-          </ul>
-        </nav>
         <section v-if="currentVisibleContent == 'print'" id="print">
-          <div v-for="item in print">
+          <div class="print-wrapper" v-for="item in print">
             <h3>{{ item.title }}</h3>
             <span>{{item.client}}</span>
             <p>{{item.description}}</p>

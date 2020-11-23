@@ -157,6 +157,9 @@ main > nav > ul > li.active {
   text-decoration: none;
 }
 
+// -------------------------------------------------------------------------
+// GRID LAYOUT
+
 @media only screen and (min-width: 800px) {
   body{
     font-size: 16px;
@@ -165,50 +168,76 @@ main > nav > ul > li.active {
   a{
     font-size: 1.5rem;
   }
+}
+#app{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 10vh 90vh;
+  grid-template-areas:
+    "aside nav"
+    "aside main";
+}
 
-  aside {
-    height: 100vh;
-    position: fixed;
-    width: 22%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #383838;
-    color: #FCFCFA;
+aside{
+  grid-area: aside;
+  align-items: center;
+  justify-content: center;
+  background-color: #383838;
+  color: #FCFCFA;
+
+  .aside-wrapper{
+    position: sticky;
+    top: 0;
   }
 
-  aside{
-    img{
-      width: 60%;
-    }
-    .logo img{
-      width: 80%;
-      margin: 3rem 0 4rem;
-    }
+  img{
+    width: 60%;
+  }
+  .logo img{
+    width: 80%;
+    margin: 3rem 0 4rem;
+  }
+}
+
+nav{
+  grid-area: nav;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #FCFCFA;
+}
+
+main{
+  grid-area: main;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-auto-rows: auto;
+  overflow-y: scroll;
+  grid-template-areas:
+  ". print-wrapper .";
+
+  #print{
+    grid-area: print-wrapper;
+
   }
 
-  main {
-    width: 100%;
-    margin-left: 22%;
+  #print > div {
+      margin: 7rem 0rem 13rem;
+      padding: 1rem 0 1rem 7rem;
+      box-shadow: 10px 10px  #093F43;
+      position: relative;
+      min-height: 330px;
+
   }
 
-  main > section {
-    padding: 60px;
-    max-width: 1200px;
-  }
-
-  main > section img {
+  section img {
     width: 100px;
     height: 100px;
   }
 
-  main > #print > div {
-    margin: 7rem 0rem 13rem 8rem;
-    padding: 1rem 0 1rem 7rem;
-    box-shadow: 10px 10px  #093F43;
-    position: relative;
-    min-height: 330px;
-  }
+
+}
 
   main > #print div:nth-child(odd) h3{
     color: #D360A0;
@@ -345,12 +374,6 @@ main > nav > ul > li.active {
   }
 
 
-  main > nav {
-    position: fixed;
-    width: 80%;
-
-  }
-
   #footer {
     width: 100%;
     margin-top: 8rem;
@@ -360,4 +383,4 @@ main > nav > ul > li.active {
       color: #FCFCFA;
     }
   }
-}
+
