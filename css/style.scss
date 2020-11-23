@@ -151,11 +151,15 @@ main {
       font-weight: 700;
       text-shadow: 2px 2px var(--black);
     }
-    .tag span{
-      padding-right: 2rem;
-      font-weight: 300;
-      font-size: 0.8rem;
-      color: var(--white);
+    .tag {
+      word-wrap: break-word;
+
+      span{
+        padding-right: 2rem;
+        font-weight: 300;
+        font-size: 0.8rem;
+        color: var(--white);
+      }
     }
   }
 }
