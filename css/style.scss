@@ -6,6 +6,9 @@
   --teal: #166369;
 }
 
+// -------------------------------------------------------------------------
+// MOBILE VIEW
+
 body {
   padding: 0;
   margin: 0;
@@ -25,13 +28,22 @@ a {
   }
 }
 
+svg{
+  width: 0px;
+  height: 0px;
+}
+
+
 aside {
+  display: block;
   min-height: 40vh;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
   background-color: var(--black);
   color: var(--white);
+
+  .aside-wrapper{
+    margin: 0;
+    padding: 3rem;
+  }
 
   img {
     border-radius: 50%;
@@ -50,8 +62,38 @@ aside {
   }
 }
 
+nav{
+  grid-area: nav;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  background-color: var(--white);
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+
+    &.active {
+      color: var(--teal);
+      text-shadow: 0 0;
+    }
+  }
+}
+
 
 main {
+  display: block;
   min-height: 70vh;
   width: 100%;
 
@@ -73,6 +115,7 @@ main > section {
   img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
   .text{
     display: none;
@@ -125,17 +168,8 @@ main > section {
   }
 }
 
-
-#footer > a,
-#footer > a:focus,
-#footer > a:active,
-#footer > a:hover {
-  color: var(--white);
-  text-decoration: none;
-}
-
 // -------------------------------------------------------------------------
-// GRID LAYOUT
+// DISPLAY VIEW
 
 @media only screen and (min-width: 800px) {
 
@@ -147,7 +181,7 @@ main > section {
   a{
     font-size: 1.5rem;
   }
-}
+
 #app{
   display: grid;
   grid-template-columns: 20% 80%;
@@ -167,6 +201,7 @@ aside{
   color:var(--white);
 
   .aside-wrapper{
+    margin-top: 10rem;
     position: sticky;
     top: 0;
   }
@@ -193,33 +228,7 @@ aside{
 
 // NAV-----------
 
-nav{
-  grid-area: nav;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  background-color: var(--white);
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0;
-  }
-
-  li {
-    display: inline;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 700;
-
-    &.active {
-      color: var(--teal);
-      text-shadow: 0 0;
-    }
-  }
-}
 
 // MAIN-------
 
@@ -300,7 +309,7 @@ main{
       }
     }
   }
-  
+
   #artwork{
     grid-area: print-wrapper;
     display: grid;
@@ -379,3 +388,4 @@ main{
   #print img.clipped{
     display: block;
   }
+}
