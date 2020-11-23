@@ -136,7 +136,7 @@ main {
         color: var(--gelb);
       }
       p{
-        padding: 2rem 0;
+        padding: 2rem 0 0;
         font-weight: 300;
         color: var(--white);
       }
@@ -152,8 +152,8 @@ main {
       text-shadow: 2px 2px var(--black);
     }
     .tag {
-      word-wrap: break-word;
-
+      margin: 0;
+      
       span{
         padding-right: 2rem;
         font-weight: 300;
