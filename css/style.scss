@@ -14,6 +14,7 @@ body {
   margin: 0;
   font-size: 13px;
   font-family: 'Roboto Mono', monospace;
+  background-color: var(--white);
   color: var(--black);
   overflow-x: hidden;
 }
@@ -43,22 +44,22 @@ aside {
   .aside-wrapper{
     margin: 0;
     padding: 3rem;
-  }
 
-  img {
-    border-radius: 50%;
-    width: 40%;
-  }
-  .logo img{
-    border-radius: 0;
-    width: 65%;
-    margin: 3rem 0 4rem;
-  }
-  > div{
-    margin: 2rem;
-  }
-  #footer{
-    margin-top: 4rem;
+    img {
+      border-radius: 50%;
+      width: 40%;
+    }
+    .logo img{
+      border-radius: 0;
+      width: 65%;
+      margin: 3rem 0 4rem;
+    }
+    #footer{
+      margin-top: 4rem;
+      a{
+        color: var(--white);
+      }
+    }
   }
 }
 
@@ -68,12 +69,12 @@ nav{
   width: 100%;
   top: 0;
   z-index: 5;
-  background-color: var(--white);
 
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: var(--white);
     padding: 0;
   }
 
@@ -93,6 +94,7 @@ nav{
 
 
 main {
+  background-color: var(--white);
   display: block;
   min-height: 70vh;
   width: 100%;
@@ -100,73 +102,75 @@ main {
   img{
     object-fit: cover;
   }
-}
 
-main > section {
-  min-height: 100vh;
-}
+  #artwork{
 
-#artwork{
+    .artwork-wrapper{
+      width: 100vw;
+      height: 100vw;
+      margin: 3rem 0;
 
-  .artwork-wrapper{
-
-
-  }
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .text{
-    display: none;
-  }
-}
-
-#print{
-
-  div{
-    background-color: var(--teal);
-    padding: 1rem;
-    margin: 2rem 1rem;
-
-    &:nth-child(odd) h3{
-      color: var(--pink);
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
-    &:nth-child(even) h3{
-      color: var(--gelb);
+    
+    .text{
+      display: none;
     }
-    p{
-      padding: 2rem 0;
+  }
+
+  #print{
+
+    div{
+      background-color: var(--teal);
+      padding: 1rem;
+      margin: 2rem 1rem;
+
+      &:nth-child(odd) h3{
+        color: var(--pink);
+      }
+      &:nth-child(even) h3{
+        color: var(--gelb);
+      }
+      p{
+        padding: 2rem 0;
+        font-weight: 300;
+        color: var(--white);
+      }
+      span {
+        color: var(--white);
+        font-size: 1.1rem;
+      }
+    }
+    h3{
+      margin-bottom: 1rem;
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px var(--black);
+    }
+    .tag span{
+      padding-right: 2rem;
       font-weight: 300;
-      color: #FCFCFA;
+      font-size: 0.8rem;
+      color: var(--white);
     }
-    span {
-      color: #FCFCFA;
-      font-size: 1.1rem;
-    }
-  }
-  h3{
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    font-weight: 700;
-    text-shadow: 2px 2px var(--black);
-  }
-  img.clipped{
-    display: none;
-  }
-  div.clipped{
-    display: none;
-  }
-  .svg{
-    display: none;
-  }
-  .tag span{
-    padding-right: 2rem;
-    font-weight: 300;
-    font-size: 0.8rem;
-    color: var(--white);
   }
 }
+
+img.clipped{
+  display: none;
+}
+div.clipped{
+  display: none;
+}
+.svg{
+  display: none;
+}
+
+
 
 // -------------------------------------------------------------------------
 // DISPLAY VIEW
@@ -195,8 +199,6 @@ main > section {
 
 aside{
   grid-area: aside;
-  align-items: center;
-  justify-content: center;
   background-color: var(--black);
   color:var(--white);
 
@@ -204,15 +206,15 @@ aside{
     margin-top: 10rem;
     position: sticky;
     top: 0;
-  }
 
-  img{
-    width: 60%;
-  }
+    img{
+      width: 60%;
+    }
 
-  .logo img{
-    width: 80%;
-    margin: 3rem 0 4rem;
+    .logo img{
+      width: 80%;
+      margin: 3rem 0 4rem;
+    }
   }
 
   #footer {
@@ -220,15 +222,12 @@ aside{
     margin-top: 8rem;
 
     a{
+      color: var(--white);
       font-size: 1rem;
       color: var(--white);
     }
   }
 }
-
-// NAV-----------
-
-
 
 // MAIN-------
 
@@ -241,10 +240,10 @@ main{
   grid-auto-rows: auto;
   overflow-y: scroll;
   grid-template-areas:
-  ". print-wrapper .";
+  ". wrapper .";
 
   #print{
-    grid-area: print-wrapper;
+    grid-area: wrapper;
 
     >div {
       margin: 7rem 0rem 13rem;
@@ -311,7 +310,7 @@ main{
   }
 
   #artwork{
-    grid-area: print-wrapper;
+    grid-area: wrapper;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 4rem;
@@ -334,7 +333,6 @@ main{
           position: absolute;
           top: 0;
           left: 0;
-          // color: #FDEB16;
           align-items: center;
           justify-content: center;
         }
