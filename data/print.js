@@ -5,7 +5,7 @@ export default [
     description:
       "14. Ausgabe der Konferenz im Bereich Computer Systems – Vernetzung von Industrie und Forschung",
     url: "https://github.com/julianctni/mensaDD",
-    tags: ["Banner", "Programmheft", "Badges", "Plakate"],
+    tags: ["Banner", "Programmheft", "Badges"],
     id: "eurosys",
   },
   {
