@@ -64,32 +64,11 @@ main {
 main > section {
   min-height: 100vh;
 }
-nav > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 0;
-}
-
-nav > ul > li {
-  display: inline;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-nav > ul > li.active {
-  color: var(--teal);
-  text-shadow: 0 0;
-}
 
 #artwork{
 
   .artwork-wrapper{
-    width: 100vw;
-    height: 100vw;
-    margin-bottom: 2rem;
+
 
   }
   img{
@@ -160,6 +139,8 @@ nav > ul > li.active {
 // GRID LAYOUT
 
 @media only screen and (min-width: 800px) {
+
+// DEFAULT-------------
   body{
     font-size: 16px;
   }
@@ -176,6 +157,8 @@ nav > ul > li.active {
     "aside nav"
     "aside main";
 }
+
+// ASIDE------------
 
 aside{
   grid-area: aside;
@@ -198,13 +181,37 @@ aside{
   }
 }
 
+// NAV-----------
+
 nav{
   grid-area: nav;
   position: sticky;
   top: 0;
   z-index: 5;
   background-color: var(--white);
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+
+    &.active {
+      color: var(--teal);
+      text-shadow: 0 0;
+    }
+  }
 }
+
+// MAIN-------
 
 main{
   grid-area: main;
@@ -229,41 +236,49 @@ main{
       position: relative;
       min-height: 330px;
 
+      &:nth-child(odd) h3{
+        color: var(--pink);
+      }
+
+      &:nth-child(even) h3{
+        color: var(--gelb);
+      }
+
+      h3 {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: 700;
+        text-shadow: 2px 2px var(--black);
+      }
+
+      span {
+        font-weight: 600;
+        color: var(--white);
+      }
+
+      p {
+        padding: 1rem 20rem 0 0;
+        font-weight: 300;
+        color: var(--white);
+      }
+  }
+
+  #artwork{
+    grid-area: print-wrapper;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 4rem;
   }
 
   section img {
     width: 100px;
     height: 100px;
   }
-
-
 }
 
-  main > #print div:nth-child(odd) h3{
-    color: var(--pink);
-  }
 
-  main > #print div:nth-child(even) h3{
-    color: var(--gelb);
-  }
 
-  main > #print > div > h3 {
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    font-weight: 700;
-    text-shadow: 2px 2px var(--black);
-  }
-
-  main > #print > div > span {
-    font-weight: 600;
-    color: var(--white);
-  }
-
-  main > #print > div > p {
-    padding: 1rem 20rem 0 0;
-    font-weight: 300;
-    color: var(--white);
-  }
+// OLD--------
 
   #print div{
     margin: 0 0;
@@ -328,18 +343,10 @@ main{
     display: block;
   }
 
-  #artwork{
-    display: flex;
-    flex-flow: row wrap;
-    align-content: start;
-  }
 
   .artwork-wrapper{
-    width: calc(80vw / 3 - 6rem);
-    max-width: calc(400px - 6rem);
-    height: calc(80vw / 3 - 6rem);
-    max-height: calc(400px - 6rem);
-    margin: 3rem;
+    width: 19vw;
+    height: 19vw;
     position: relative;
 
     .overlay{
