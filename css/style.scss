@@ -1,19 +1,27 @@
+:root {
+  --black: #383838;
+  --white: #FCFCFA;
+  --pink: #D360A0;
+  --gelb: #FDEB16;
+  --teal: #166369;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-size: 13px;
   font-family: 'Roboto Mono', monospace;
-  color: #383838;
+  color: var(--black);
   overflow-x: hidden;
 }
 
 a {
-  color: #D360A0;
+  color: var(--pink);
   text-decoration: none;
   font-size: 1rem;
 
   &:hover{
-    color: #FDEB16;
+    color: var(--gelb);
   }
 }
 
@@ -23,8 +31,8 @@ aside {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #383838;
-  color: #FCFCFA;
+  background-color: var(--black);
+  color: var(--white);
 
   img {
     border-radius: 50%;
@@ -105,15 +113,15 @@ main > nav > ul > li.active {
 #print{
 
   div{
-    background-color: #166369;
+    background-color: var(--teal);
     padding: 1rem;
     margin: 2rem 1rem;
 
     &:nth-child(odd) h3{
-      color: #D360A0;
+      color: var(--pink);
     }
     &:nth-child(even) h3{
-      color: #FDEB16;
+      color: var(--gelb);
     }
     p{
       padding: 2rem 0;
@@ -129,7 +137,7 @@ main > nav > ul > li.active {
     margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: 700;
-    text-shadow: 2px 2px #383838;
+    text-shadow: 2px 2px var(--black);
   }
   img.clipped{
     display: none;
@@ -144,7 +152,7 @@ main > nav > ul > li.active {
     padding-right: 2rem;
     font-weight: 300;
     font-size: 0.8rem;
-    color: #FCFCFA;
+    color: var(--white);
   }
 }
 
@@ -153,7 +161,7 @@ main > nav > ul > li.active {
 #footer > a:focus,
 #footer > a:active,
 #footer > a:hover {
-  color: #FCFCFA;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -182,8 +190,8 @@ aside{
   grid-area: aside;
   align-items: center;
   justify-content: center;
-  background-color: #383838;
-  color: #FCFCFA;
+  background-color: var(--black);
+  color:var(--white);
 
   .aside-wrapper{
     position: sticky;
@@ -204,11 +212,12 @@ nav{
   position: sticky;
   top: 0;
   z-index: 5;
-  background-color: #FCFCFA;
+  background-color: var(--white);
 }
 
 main{
   grid-area: main;
+  background-color: var(--white);
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 10% 80% 10%;
@@ -240,29 +249,29 @@ main{
 }
 
   main > #print div:nth-child(odd) h3{
-    color: #D360A0;
+    color: var(--pink);
   }
 
   main > #print div:nth-child(even) h3{
-    color: #FDEB16;
+    color: var(--gelb);
   }
 
   main > #print > div > h3 {
     margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: 700;
-    text-shadow: 2px 2px #383838;
+    text-shadow: 2px 2px var(--black);
   }
 
   main > #print > div > span {
     font-weight: 600;
-    color: #FCFCFA;
+    color: var(--white);
   }
 
   main > #print > div > p {
     padding: 1rem 20rem 0 0;
     font-weight: 300;
-    color: #FCFCFA;
+    color: var(--white);
   }
 
   #print div{
@@ -304,24 +313,24 @@ main{
     height: 460px;
     top: -65px;
     right: -215px;
-    background-color: #FCFCFA;
+    background-color: var(--white);
     z-index: 0;
   }
 
   main > #print div:nth-child(odd):hover 
 
   .clipped {
-    background-color: #D360A0;
+    background-color: var(--pink);
   }
 
   main > #print div:nth-child(even):hover 
 
   .clipped {
-    background-color: #FDEB16;
+    background-color: var(--gelb);
   }
 
   #dot {
-    fill: #D360A0;
+    fill: var(--pink);
   }
   
   #print img.clipped{
@@ -366,7 +375,7 @@ main{
       display: block;
       font-weight: 600;
       font-size: 2rem;
-      color: #FDEB16;
+      color: var(--gelb);
       text-align: center;
       text-transform: uppercase;
       z-index: 10;
@@ -380,7 +389,7 @@ main{
 
     a{
       font-size: 1rem;
-      color: #FCFCFA;
+      color: var(--white);
     }
   }
 
