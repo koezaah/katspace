@@ -59,4 +59,16 @@ export default [
     id: "sunset",
     text: "sunset",
   },
+  {
+    id: "linie",
+    text: "linie",
+  },
+  {
+    id: "kreis",
+    text: "kreis",
+  },
+  {
+    id: "red",
+    text: "rot",
+  },
 ];
