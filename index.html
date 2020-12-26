@@ -77,14 +77,15 @@
         </section>
         <section v-if="currentVisibleContent == 'artwork'" id="artwork">
           <div :key="`artwork-${item.id}`" class="artwork-wrapper" v-for="item in artwork">
-            <img :src="artworkImages[item.id]"/>
             <a v-if="item.url" :href="item.url" target="_blank">
+              <img :src="artworkImages[item.id]"/>
               <div class="overlay">
-                <p class="text">{{ item.text}}</p>
+                <p class="text">{{ item.text }}</p>
               </div>
             </a>
-            <div v-else class="overlay">
-              <p class="text">{{ item.text}}</p>
+            <img v-if="!item.url" :src="artworkImages[item.id]"/>
+            <div v-if="!item.url" class="overlay">
+              <p class="text">{{ item.text }}</p>
             </div>
           </div>
         </section>
