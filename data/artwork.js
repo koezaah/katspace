@@ -71,4 +71,16 @@ export default [
     id: "red",
     text: "rot",
   },
+  {
+    id: "berlin",
+    text: "berlin",
+  },
+  {
+    id: "wave",
+    text: "wave",
+  },
+  {
+    id: "disco-mas",
+    text: "disco-mas",
+  },
 ];

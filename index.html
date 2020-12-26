@@ -64,7 +64,7 @@
 
       <main>
         <section v-if="currentVisibleContent == 'print'" id="print">
-          <div class="print-wrapper" v-for="item in print">
+          <div :key="`print-${item.id}`" class="print-wrapper" v-for="item in print">
             <h3>{{ item.title }}</h3>
             <span>{{item.client}}</span>
             <p>{{item.description}}</p>
@@ -76,7 +76,7 @@
           </div>
         </section>
         <section v-if="currentVisibleContent == 'artwork'" id="artwork">
-          <div class="artwork-wrapper" v-for="item in artwork">
+          <div :key="`artwork-${item.id}`" class="artwork-wrapper" v-for="item in artwork">
             <img :src="artworkImages[item.id]"/>
             <div class="overlay">
             <p class="text">{{ item.text}}</p></div>
