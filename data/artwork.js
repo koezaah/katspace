@@ -2,6 +2,7 @@ export default [
   {
     id: "avocado",
     text: "AVOCADO",
+    url: "https://instagram.com/p/CJQ29lwMsgu/?igshid=mvkggd4dx6jx",
   },
   {
     id: "pasta",
