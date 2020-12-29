@@ -10,7 +10,8 @@ export default [
   },
   {
     id: "pasta-gabel",
-    text: "pasta", 
+    text: "pasta",
+    url: "https://instagram.com/p/CJYTDgsM52G/?igshid=ujx3b8ozb1e4", 
   },
   {
     id: "face",
